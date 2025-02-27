@@ -1,0 +1,32 @@
+---
+# A sample yaml file
+company: itsmartflex
+project: crm
+vms:
+  - name: "test1"
+    description: "VM1"
+    vm_ram: 6144
+    vm_cpu: 2
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: false
+    vm_independent_disks: []
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.10.101"
+        gateway: "10.1.10.1"
+  - name: "test2"
+    description: "VM2"
+    vm_ram: 4096
+    vm_cpu: 2
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: true
+    vm_independent_disks:
+      - vm_disk_size: 20480
+      - vm_disk_size: 10240
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.10.102"
+        gateway: "10.1.10.1"
+      - rs_network_index: 1
+        ip: "10.1.11.102"
+        gateway: ""
