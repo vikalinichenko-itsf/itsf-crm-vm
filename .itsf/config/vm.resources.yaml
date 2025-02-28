@@ -1,32 +1,128 @@
 ---
-# A sample yaml file
 company: itsmartflex
 project: crm
 vms:
-  - name: "test1"
-    description: "VM1"
-    vm_ram: 6144
+  - name: "rancher-server-1"
+    description: "VM for Rancher Server. Node 1. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 4
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: true
+    vm_independent_disks:
+      - vm_disk_size: 30720
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.51"
+        gateway: "10.1.2.1"
+  - name: "rancher-server-2"
+    description: "VM for Rancher Server. Node 2. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 4
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: true
+    vm_independent_disks:
+      - vm_disk_size: 30720
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.52"
+        gateway: "10.1.2.1"
+  - name: "rancher-server-3"
+    description: "VM for Rancher Server. Node 3. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 4
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: true
+    vm_independent_disks:
+      - vm_disk_size: 30720
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.53"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-master-1"
+    description: "VM for CRM k8s. Master Node 1. !MANAGED BY TERRAFORM!"
+    vm_ram: 8192
     vm_cpu: 2
     vm_template: "itsf-tf-oel-8-10-template"
     vm_independent_disk: false
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
-        ip: "10.1.10.101"
-        gateway: "10.1.10.1"
-  - name: "test2"
-    description: "VM2"
-    vm_ram: 4096
+        ip: "10.1.2.54"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-master-2"
+    description: "VM for CRM k8s. Master Node 2. !MANAGED BY TERRAFORM!"
+    vm_ram: 8192
     vm_cpu: 2
     vm_template: "itsf-tf-oel-8-10-template"
-    vm_independent_disk: true
-    vm_independent_disks:
-      - vm_disk_size: 20480
-      - vm_disk_size: 10240
+    vm_independent_disk: false
+    vm_independent_disks: []
     networks:
       - rs_network_index: 0
-        ip: "10.1.10.102"
-        gateway: "10.1.10.1"
-      - rs_network_index: 1
-        ip: "10.1.11.102"
-        gateway: ""
+        ip: "10.1.2.55"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-master-3"
+    description: "VM for CRM k8s. Master Node 3. !MANAGED BY TERRAFORM!"
+    vm_ram: 8192
+    vm_cpu: 2
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: false
+    vm_independent_disks: []
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.56"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-1"
+    description: "VM for CRM k8s. Worker Node 1. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: false
+    vm_independent_disks: []
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.57"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-2"
+    description: "VM for CRM k8s. Worker Node 2. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: false
+    vm_independent_disks: []
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.58"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-3"
+    description: "VM for CRM k8s. Worker Node 3. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: false
+    vm_independent_disks: []
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.59"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-4"
+    description: "VM for CRM k8s. Worker Node 4. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: false
+    vm_independent_disks: []
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.60"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-5"
+    description: "VM for CRM k8s. Worker Node 5. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: false
+    vm_independent_disks: []
+    networks:
+      - rs_network_index: 0
+        ip: "10.1.2.61"
+        gateway: "10.1.2.1"
