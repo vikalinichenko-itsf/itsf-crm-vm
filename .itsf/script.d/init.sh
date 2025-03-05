@@ -4,7 +4,7 @@ set -e
 
 source ./.itsf/config/source.file
 ./bin/terraform --version
-./bin/terraform init \
+./bin/terraform init -migrate-state \
     -backend-config="bucket=${S3_BUCKET}" \
     -backend-config="key=${S3_KEY}" \
     -backend-config="secret_key=${S3_SECRET_KEY}" \
