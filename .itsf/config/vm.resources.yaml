@@ -12,6 +12,9 @@ vms:
       - vm_disk_size: 30720
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.51"
         gateway: "10.1.2.1"
   - name: "rancher-server-2"
@@ -24,6 +27,9 @@ vms:
       - vm_disk_size: 30720
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.52"
         gateway: "10.1.2.1"
   - name: "rancher-server-3"
@@ -36,6 +42,9 @@ vms:
       - vm_disk_size: 30720
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.53"
         gateway: "10.1.2.1"
   - name: "crm-k8s-master-1"
@@ -47,6 +56,9 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.54"
         gateway: "10.1.2.1"
   - name: "crm-k8s-master-2"
@@ -58,6 +70,9 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.55"
         gateway: "10.1.2.1"
   - name: "crm-k8s-master-3"
@@ -69,6 +84,9 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.56"
         gateway: "10.1.2.1"
   - name: "crm-k8s-worker-1"
@@ -80,6 +98,9 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.57"
         gateway: "10.1.2.1"
   - name: "crm-k8s-worker-2"
@@ -91,6 +112,9 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.58"
         gateway: "10.1.2.1"
   - name: "crm-k8s-worker-3"
@@ -102,6 +126,9 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.59"
         gateway: "10.1.2.1"
   - name: "crm-k8s-worker-4"
@@ -113,6 +140,9 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.60"
         gateway: "10.1.2.1"
   - name: "crm-k8s-worker-5"
@@ -124,5 +154,8 @@ vms:
     vm_independent_disks: []
     networks:
       - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
         ip: "10.1.2.61"
         gateway: "10.1.2.1"
