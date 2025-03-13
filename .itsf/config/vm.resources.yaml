@@ -159,3 +159,48 @@ vms:
         ip_allocation_mode: "DHCP"
         ip: "10.1.2.61"
         gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-longhorn-1"
+    description: "VM for CRM k8s. Worker Longhorn Node 1. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: true
+    vm_independent_disks:
+      - vm_disk_size: 102400
+    networks:
+      - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
+        ip: "10.1.2.62"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-longhorn-2"
+    description: "VM for CRM k8s. Worker Longhorn Node 2. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: true
+    vm_independent_disks:
+      - vm_disk_size: 102400
+    networks:
+      - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
+        ip: "10.1.2.63"
+        gateway: "10.1.2.1"
+  - name: "crm-k8s-worker-longhorn-3"
+    description: "VM for CRM k8s. Worker Longhorn Node 3. !MANAGED BY TERRAFORM!"
+    vm_ram: 16384
+    vm_cpu: 6
+    vm_template: "itsf-tf-oel-8-10-template"
+    vm_independent_disk: true
+    vm_independent_disks:
+      - vm_disk_size: 102400
+    networks:
+      - rs_network_index: 0
+        adapter_type: "E1000E"
+        is_primary: true
+        ip_allocation_mode: "DHCP"
+        ip: "10.1.2.64"
+        gateway: "10.1.2.1"
